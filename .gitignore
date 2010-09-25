@@ -1,0 +1,5 @@
+.netrwhist
+*.swp
+*.swo
+backup/
+swp/
