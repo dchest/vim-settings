@@ -71,7 +71,10 @@ noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme defau
 
 " colorscheme google
 " colorscheme desert
-" colorscheme darkblue
+if has('gui_running') 
+    colorscheme darkblue
+endif
+set gfn=Menlo\ Regular:h12
 
 " Markdown
 augroup mkd
@@ -81,4 +84,3 @@ augroup mkd
 augroup END
 
 syntax on
-
