@@ -9,6 +9,9 @@ noremap <Down> gj
 
 "noremap \\ :nohlsearch<Return>
 
+
+call pathogen#runtime_append_all_bundles()
+
 " Highlight search terms...
 " set hlsearch
 set incsearch " ...dynamically as they are typed.
@@ -74,7 +77,7 @@ noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme defau
 if has('gui_running') 
     colorscheme darkblue
 endif
-set gfn=Menlo\ Regular:h12
+set gfn=Droid\ Sans\ Mono:h13
 
 " Markdown
 augroup mkd
@@ -84,3 +87,4 @@ augroup mkd
 augroup END
 
 syntax on
+
