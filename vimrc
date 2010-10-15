@@ -70,7 +70,7 @@ set iminsert=0
 set imsearch=0
 
 noremap <C-x><C-f> :set fullscreen<CR>:set guioptions-=r<CR>:colorscheme candy<CR>
-noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme default<CR>
+noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme darkblue<CR>
 
 " colorscheme google
 " colorscheme desert
@@ -88,3 +88,4 @@ augroup END
 
 syntax on
 
+set wrap lbr
