@@ -89,3 +89,8 @@ augroup END
 syntax on
 
 set wrap lbr
+
+" Use Blowfish encryption for :X
+if version >= 703
+    set cryptmethod=blowfish
+endif
