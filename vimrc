@@ -16,7 +16,7 @@ call pathogen#runtime_append_all_bundles()
 " set hlsearch
 set incsearch " ...dynamically as they are typed.
 
-" Tab -> 2 spaces
+" Tab -> 4 spaces
 set autoindent
 set softtabstop=4
 set tabstop=4
@@ -70,20 +70,19 @@ set iminsert=0
 set imsearch=0
 
 noremap <C-x><C-f> :set fullscreen<CR>:set guioptions-=r<CR>:colorscheme candy<CR>
-noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme darkblue<CR>
+noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme default<CR>
 
 " colorscheme google
 " colorscheme desert
-if has('gui_running') 
-    colorscheme darkblue
-endif
-set gfn=Droid\ Sans\ Mono:h13
+"if has('gui_running') 
+"    colorscheme candy " darkblue
+"endif
+"set gfn=Droid\ Sans\ Mono:h13
+set gfn=DejaVu\ Sans\ Mono:h13
 
 " Markdown
 augroup mkd
-
-  autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt; tabstop=4 softtabstop=4 tw=79
-
+autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt; tabstop=4 softtabstop=4 tw=79 
 augroup END
 
 syntax on
@@ -94,3 +93,14 @@ set wrap lbr
 if version >= 703
     set cryptmethod=blowfish
 endif
+
+"" Live word count 
+" function WordCount()
+"     let s:old_status = v:statusmsg
+"     exe "silent normal g\<c-g>"
+"     let s:word_count = str2nr(split(v:statusmsg)[11])
+"     let v:statusmsg = s:old_status
+"     return s:word_count
+" endfunction
+"set statusline+=w%{WordCount() words}
+"set statusline+=wc:%{WordCount()} 
