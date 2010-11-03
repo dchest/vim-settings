@@ -16,6 +16,10 @@ call pathogen#runtime_append_all_bundles()
 " set hlsearch
 set incsearch " ...dynamically as they are typed.
 
+" Avoid 'no write since last change' message for unsaved buffers
+" when switching buffers with bnext, bprev.
+set hidden
+
 " Tab -> 4 spaces
 set autoindent
 set softtabstop=4
