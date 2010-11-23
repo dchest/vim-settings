@@ -95,6 +95,11 @@ augroup mkd
 autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt; tabstop=4 softtabstop=4 tw=79 
 augroup END
 
+let b:is_mzscheme=1
+augroup racket
+    autocmd BufRead,BufNewFile *.rkt set filetype=scheme
+augroup END
+
 syntax on
 
 set wrap lbr
@@ -114,3 +119,4 @@ endif
 " endfunction
 "set statusline+=w%{WordCount() words}
 "set statusline+=wc:%{WordCount()} 
+"
