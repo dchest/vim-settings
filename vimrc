@@ -84,9 +84,9 @@ noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme defau
 
 " colorscheme google
 " colorscheme desert
-"if has('gui_running') 
-"    colorscheme candy " darkblue
-"endif
+if has('gui_running') 
+    " colorscheme asmanian2 " darkblue
+endif
 "set gfn=Droid\ Sans\ Mono:h13
 set gfn=DejaVu\ Sans\ Mono:h13
 
@@ -120,3 +120,5 @@ endif
 "set statusline+=w%{WordCount() words}
 "set statusline+=wc:%{WordCount()} 
 "
+
+let coffee_compile_on_save = 1
