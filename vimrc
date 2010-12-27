@@ -84,11 +84,12 @@ noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme defau
 
 " colorscheme google
 " colorscheme desert
+set gfn=Droid\ Sans\ Mono:h13
+"set gfn=DejaVu\ Sans\ Mono:h13
 if has('gui_running') 
-    " colorscheme asmanian2 " darkblue
+    colorscheme my_macvim "blackboard asmanian2  darkblue
+    set number
 endif
-"set gfn=Droid\ Sans\ Mono:h13
-set gfn=DejaVu\ Sans\ Mono:h13
 
 " Markdown
 augroup mkd
