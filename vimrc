@@ -22,10 +22,10 @@ set hidden
 
 " Tab -> 4 spaces
 set autoindent
-set softtabstop=4
-set tabstop=4
-set shiftwidth=4
-set expandtab
+"set softtabstop=4
+"set tabstop=4
+"set shiftwidth=4
+"set expandtab
 
 " Backups and swap
 set backupdir=~/.vim/backup//
@@ -52,7 +52,7 @@ set ignorecase
 set smartcase
 
 " Line numbers at the bottom right corner
-set ruler
+"set ruler
 
 " The following will make tabs and trailing spaces visible when requested:
 
@@ -67,10 +67,14 @@ cab o find
 
 filetype plugin on
 set guioptions-=T
+"set guioptions-=l
+"set guioptions-=r
+"set guioptions-=b
 
 " NERDTree mappings
-nmap § :NERDTree<Return>
-nmap ± :NERDTreeClose<Return>
+nmap § :NERDTreeToggle<Return>
+nmap ± :TlistToggle<Return>
+let NERDTreeWinPos="right"
 
 "set langmap=йцукенгшщзхъфывапролджэячсмитьбю/ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ/;qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP[]ASDFGHJKL:'ZXCVBNM,./
 "map ё <Bslash> 
@@ -82,13 +86,16 @@ set imsearch=0
 noremap <C-x><C-f> :set fullscreen<CR>:set guioptions-=r<CR>:colorscheme candy<CR>
 noremap <C-x><C-x> :set nofullscreen<CR>:set guioptions+=r<CR>:colorscheme default<CR>
 
-" colorscheme google
 " colorscheme desert
-set gfn=Droid\ Sans\ Mono:h13
+"set gfn=Droid\ Sans\ Mono:h13
+"set gfn=Cousine:h13
 "set gfn=DejaVu\ Sans\ Mono:h13
+set gfn=Menlo:h13
 if has('gui_running') 
-    colorscheme my_macvim "blackboard asmanian2  darkblue
-    set number
+    colorscheme mellow "my_macvim "blackboard asmanian2  darkblue
+	" Let fullscreen mode take the whole screen
+	"set fuopt=maxvert,maxhorz
+    "set number
 endif
 
 " Markdown
@@ -101,7 +108,7 @@ augroup racket
     autocmd BufRead,BufNewFile *.rkt set filetype=scheme
 augroup END
 
-syntax on
+syntax off
 
 set wrap lbr
 
@@ -123,3 +130,15 @@ endif
 "
 
 let coffee_compile_on_save = 1
+
+
+"set iskeyword+=. 
+
+" TagList.vim -- go language
+let s:tlist_def_go_settings = 'go;g:enum;s:struct;u:union;t:type;' .
+                           \ 'v:variable;f:function'
+
+
+
+
+
